@@ -11,15 +11,15 @@ public class Main {
     public static String terminals = new String(new char[]{'#', '+', '*', '(', ')', 'i'});
 
     //0=error,1=less,2=more,3=equal
-    public static int[][] matrix = {{3, 1, 1, 1, 1, 1}, {2, 2, 1, 1, 2, 1}, {2, 2, 2, 1, 2, 1}, {0, 1, 1, 1, 3, 1}, {2, 2, 2, 0, 2, 0}, {2, 2, 2, 0, 2, 0}};
+    public static int[][] matrix = {{3, 1, 1, 1, 1, 1}, {2, 2, 1, 1, 2, 1}, {2, 2, 2, 1, 2, 1}, {2, 1, 1, 1, 3, 1}, {2, 2, 2, 0, 2, 0}, {2, 2, 2, 0, 2, 0}};
     public static Stack<Character> symbols = new Stack<>();
 
     public static void main(String[] args) {
         String nextline;
         try {
             //测试用
-            //BufferedReader in = new BufferedReader(new FileReader("D:\\学习\\大三上\\compile\\OPG\\src\\test.txt"));
-            BufferedReader in = new BufferedReader(new FileReader(args[0]));
+            BufferedReader in = new BufferedReader(new FileReader("D:\\学习\\大三上\\compile\\OPG\\src\\test.txt"));
+            //BufferedReader in = new BufferedReader(new FileReader(args[0]));
             while ((nextline = in.readLine()) != null) {
                 String fixLine = "#" + nextline + "#";
                 for (int i = 0; i < fixLine.length(); i++) {
