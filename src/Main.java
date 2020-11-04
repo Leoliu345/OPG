@@ -21,8 +21,7 @@ public class Main {
             //BufferedReader in = new BufferedReader(new FileReader("D:\\学习\\大三上\\compile\\OPG\\src\\test.txt"));
             BufferedReader in = new BufferedReader(new FileReader(args[0]));
             while ((nextline = in.readLine()) != null) {
-                System.out.println(nextline);
-                String fixLine = "#" + nextline.substring(0, nextline.length() - 1) + "#";
+                String fixLine = "#" + nextline + "#";
                 for (int i = 0; i < fixLine.length(); i++) {
                     char next = fixLine.charAt(i);
                     if (symbols.empty())
