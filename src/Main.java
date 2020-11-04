@@ -11,7 +11,7 @@ public class Main {
     public static String terminals = new String(new char[]{'#', '+', '*', '(', ')', 'i'});
 
     //0=error,1=less,2=more,3=equal
-    public static int[][] matrix = {{3, 1, 1, 1, 1, 1}, {2, 1, 1, 1, 2, 1}, {2, 2, 1, 1, 2, 1}, {0, 1, 1, 1, 3, 1}, {2, 2, 2, 0, 2, 0}, {2, 2, 2, 0, 2, 0}};
+    public static int[][] matrix = {{3, 1, 1, 1, 1, 1}, {2, 2, 1, 1, 2, 1}, {2, 2, 2, 1, 2, 1}, {0, 1, 1, 1, 3, 1}, {2, 2, 2, 0, 2, 0}, {2, 2, 2, 0, 2, 0}};
     public static Stack<Character> symbols = new Stack<>();
 
     public static void main(String[] args) {
