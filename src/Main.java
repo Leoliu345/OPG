@@ -45,7 +45,7 @@ public class Main {
                         } else if (judgePriority == 3) {
                             if (next == '#') return;
                             symbols.push(next);
-                            System.out.println("R");
+                            System.out.println("I"+next);
                         } else {
                             System.out.println("E");
                             return;
