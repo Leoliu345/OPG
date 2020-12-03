@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
@@ -24,10 +22,13 @@ public class Main {
         String nextline;
         try {
             //测试用
-            //BufferedReader in = new BufferedReader(new FileReader("D:\\学习\\大三上\\compile\\OPG\\src\\test.txt"));
-            BufferedReader in = new BufferedReader(new FileReader(args[0]));
+//            BufferedReader in = new BufferedReader(new FileReader("D:\\学习\\大三上\\compile\\OPG\\src\\test.txt"));
+            BufferedReader in = new BufferedReader(new FileReader(args[1]));
+            BufferedWriter out=new BufferedWriter(new FileWriter(args[2]));
+//            BufferedWriter out=new BufferedWriter(new FileWriter("D:\\学习\\大三上\\compile\\OPG\\src\\test.out"));
             while ((nextline = in.readLine()) != null) {
                 System.out.println(nextline);
+                out.write(nextline+'\n');
 //                String fixLine = "#" + nextline + "#";
 //                for (int i = 0; i < fixLine.length(); i++) {
 //                    char next = fixLine.charAt(i);
@@ -60,6 +61,7 @@ public class Main {
 //                    }
 //                }
             }
+            out.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
