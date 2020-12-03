@@ -1,4 +1,4 @@
-[jobs.opg]
+[jobs.c0]
 image = { source = "dockerfile", path = ".", tag = "my-opg" }
 run = [
   "java Main $input",
